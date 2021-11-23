@@ -1,0 +1,13 @@
+<div>
+  <hr />
+  <p>Http test Component</p>
+  <button (click)="fetchData()">Fetch data</button>
+  <div *ngIf="data && data.length">
+    <p>Id - {{data[0].id}}</p>
+    <p>Title - {{data[0].title}}</p>
+    <p>UserId - {{data[0].userId}}</p>
+    <p>Completed - {{data[0].completed}}</p>
+  </div>
+  <button routerLink="./pipe">Go to pipe</button>
+  <router-outlet></router-outlet>
+</div>

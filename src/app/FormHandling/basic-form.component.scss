@@ -1,0 +1,33 @@
+$color-red: red;
+$color-green: green;
+$color-yellow: yellow;
+
+@mixin btn-border($color) {
+  @extend .fonting;
+  border: none;
+  padding: 10px;
+  background-color: $color;
+  margin: 10px;
+  cursor: pointer;
+}
+
+@function calc-border($val) {
+  @return ($val * 3px);
+}
+
+.fonting {
+  font-weight: bold;
+  font-size: 20px;
+}
+.green-btn {
+  @include btn-border($color-green);
+  border: calc-border(2) solid yellow;
+}
+
+.yellow-btn {
+  @include btn-border($color-yellow);
+}
+
+.red-btn {
+  @include btn-border($color-red);
+}

@@ -1,0 +1,33 @@
+<div>
+  <hr />
+  <p>Basic Form Component</p>
+  <div>
+    <div [formGroup]="dataForm">
+      <input type="text" formControlName="name" />
+    </div>
+
+    <div *ngIf="dataForm.controls['name'].errors" style="color: red">
+
+      <div *ngIf="dataForm.controls['name'].errors['required']">
+        * Required</div>
+
+
+      <div *ngIf="dataForm.controls['name'].errors['minlength']">
+        *Mininimum 6 chars required
+      </div>
+
+      <div *ngIf="dataForm.controls['name'].errors['maxlength']">
+        * Cannot exceed 7 chars</div>
+
+
+
+    </div>
+
+
+    <button class="red-btn" (click)=" submitForm()">Submit</button>
+    <button class="green-btn" (click)=" submitForm()">Submit</button>
+    <button class="yellow-btn" (click)=" submitForm()">Submit</button>
+
+  </div>
+
+</div>

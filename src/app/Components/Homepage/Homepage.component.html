@@ -1,0 +1,15 @@
+<div>
+  <hr />
+  <p>Home page component</p>
+  <ng-container *ngIf="emittedData">
+    <p>{{emittedData}}</p>
+  </ng-container>
+  <app-receiver [myName]="myName" [myAge]="myAge" (callHomePageEvent)="callHomePageEvent($event)"> </app-receiver>
+
+
+  <ul>
+    <li *ngFor="let item of listData; let i = index; let isOdd = odd;let isLast = last;let isFirst = first"> {{i}}.
+      {{isOdd}} {{isFirst}} {{isLast}} {{item}}</li>
+  </ul>
+
+</div>

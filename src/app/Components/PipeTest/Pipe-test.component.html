@@ -1,0 +1,12 @@
+<div>
+  <hr />
+  <p>Pipe Test Component</p>
+  <p>{{"this is to test text append pipe " | appendText:"APPEND THIS TEXT"}}</p>
+
+
+  <div *ngFor="let i of arr | MakeUpper">
+    {{i}}
+  </div>
+  <br />
+  <button (click)="addData()">Add data to array</button>
+</div>
